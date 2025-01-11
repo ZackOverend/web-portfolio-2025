@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
     <>
         <nav className="">
-            <div className="bg-[#1C1C1C] backdrop-blur-lg fixed flex w-screen h-16 px-16 py-4 align-middle items-center justify-between">
+            <div className="bg-[#1C1C1C]/30 backdrop-blur-xl fixed flex w-screen h-16 px-16 py-4 align-middle items-center justify-between z-10">
                 
                 <div className="w-12 h-14 flex flex-none space-x-6 items-center">
                     <Image
