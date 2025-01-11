@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function HeroText() {
@@ -13,7 +13,7 @@ export default function HeroText() {
 
   return (
     <motion.div 
-    className="absolute inset-0 flex flex-wrap items-center justify-center sm:justify-start z-50 min-w-[75vw] px-4 pointer-events-none"
+    className="absolute inset-0 flex flex-wrap items-center justify-center sm:justify-start z-50 min-w-[75vw] px-4 pointer-events-none space-y-4"
     style={{y}}
     initial={{ opacity: 0, y: 15 }} 
     animate={{ opacity: 1, y: 0 }} 

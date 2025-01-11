@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Orbs from "@/components/orbs";
 import Mountains from "@/components/mountains";
 import HeroText from "@/components/hero-text";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 
 export default function Home() {
