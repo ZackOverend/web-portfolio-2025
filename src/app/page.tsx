@@ -10,7 +10,7 @@ export default function Home() {
         <Orbs />
         <Mountains />
       </section>
-      <section className="bg-black h-[100vh] relative z-10 -mt-2"></section>
+      <section className="bg-black mt-12 h-[100vh] relative"></section>
     </main>
   );
 }

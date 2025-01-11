@@ -7,27 +7,28 @@ export default function Orbs() {
   const [isTouch, setIsTouch] = useState(false);
 
   const greenOrb = {
-    width: 100,
-    height: 100,
+    width: 400,
+    height: 400,
     backgroundColor: "#adffe1",
     borderRadius: "9999px",
-    filter: "blur(50px)",
+    filter: "blur(150px)",
   };
   const blueOrb = {
-    width: 100,
-    height: 100,
+    width: 400,
+    height: 400,
     backgroundColor: "#aebcff",
     borderRadius: "9999px",
-    filter: "blur(50px)",
+    filter: "blur(150px)",
+    z: 50
   };
 
   const orbs = [
-    { style: greenOrb, id: "green1", position: { x: 400, y: 400 } },
+    { style: greenOrb, id: "green1", position: { x: 200, y: 400 }},
     { style: greenOrb, id: "green2", position: { x: 200, y: 200 } },
     { style: greenOrb, id: "green3", position: { x: 300, y: 300 } },
     { style: greenOrb, id: "green4", position: { x: 500, y: 500 } },
-    { style: blueOrb, id: "blue1", position: { x: 600, y: 600 } },
-    { style: blueOrb, id: "blue2", position: { x: 700, y: 700 } },
+    { style: blueOrb, id: "blue1", position: { x: 200, y: 200 } },
+    { style: blueOrb, id: "blue2", position: { x: 200, y: 200 } },
   ];
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function Orbs() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
+    <div ref={containerRef} className="mask-gradient relative w-full h-full overflow-hidden z-50">
       {orbs.map((orb) => (
         <motion.div
           key={orb.id}
