@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
-import {Chewy, Fira_Mono} from "next/font/google";
+// import {Chewy, Fira_Mono} from "next/font/google";
+import {Roboto, Roboto_Mono, Roboto_Condensed} from "next/font/google"
 
 import "./globals.css";
 
@@ -14,14 +15,32 @@ import "./globals.css";
 //   subsets: ["latin"],
 // });
 
-const chewyMedium = Chewy({
-  variable: "--font-chewy", // CSS variable for the font
+// const chewyMedium = Chewy({
+//   variable: "--font-chewy", // CSS variable for the font
+//   subsets: ["latin"],
+//   weight: "400" // Subset for the font
+// });
+
+// const firaMono = Fira_Mono({
+//   variable: "--font-fira-mono",
+//   subsets: ["latin"],
+//   weight: "400"
+// })
+
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-  weight: "400" // Subset for the font
+  weight: "400"
 });
 
-const firaMono = Fira_Mono({
-  variable: "--font-fira-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
+  weight: "400"
+})
+
+const robotoCondensed = Roboto_Condensed({
+  variable: "--font-roboto-condensed",
   subsets: ["latin"],
   weight: "400"
 })
@@ -39,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${chewyMedium.variable} ${firaMono.variable}`}
+        className={`${roboto.variable} ${robotoCondensed.variable} ${robotoMono.variable}`}
       >
         {children}
       </body>

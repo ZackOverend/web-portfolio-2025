@@ -3,34 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --font-chewy: "Chewy", cursive;
-  --font-fira-mono: "Fira-Mono", ;
+  --background: #1c1c1c;
+  --foreground: #ffffff;
+  /* --font-chewy: "Chewy", cursive;
+  --font-fira-mono: "Fira-Mono", ; */
+  --font-roboto: "Roboto";
+  --font-roboto-mono: "Roboto-Mono";
+  --font-roboto-condensed: "Roboto-Condensed";
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #000000;
+    --background: #1c1c1c;
+    --foreground: #ffffff;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-fira-mono), Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
 }
 
 h1 {
   color: var(--foreground);
-  font-family: var(--font-chewy), Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto-mono), Arial, Helvetica, sans-serif;
   font-size: xx-large;
 }
 
 h2 {
   color: var(--foreground);
-  font-family: var(--font-fira-mono), Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto-condensed), Arial, Helvetica, sans-serif;
   font-size: x-large;
 }
 
