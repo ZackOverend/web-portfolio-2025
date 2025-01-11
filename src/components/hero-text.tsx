@@ -23,7 +23,7 @@ export default function HeroText() {
     }}
     >
       <h1 className="text-2xl sm:text-5xl text-white text-center">
-        Hey, I'm ZACKARY OVEREND
+        Hey, Im ZACKARY OVEREND
         <p className="text-lg text-left">Full Stack Developer
         Mobile Computing Specialist</p>
       </h1>
