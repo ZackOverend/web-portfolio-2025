@@ -1,21 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useParallax } from "@/hooks/useParralax";
+import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { useParallax } from "@/hooks/useParralax";
 
 export default function Mountains() {
-  // Get the scroll position from Framer Motion  
-
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, -25);
+  const y = useParallax(scrollYProgress, 50);
 
   return (
-    <div className="relative w-full h-auto">
+    <div className="bg-red-700">
       {/* Back Mountain */}
-      <div className="absolute w-full bottom-4 left-0 -z-10 -my-4 sm:pb-4 md:pb-8 lg:pb-14 pointer-events-none ">
+      <div className="absolute w-full bottom-4 left-0 -z-10 sm:pb-4 md:pb-8 lg:pb-16 pointer-events-none ">
         <Image
           src="/shapes/mountains-back.svg"
           alt="Mountains Back"
@@ -23,13 +21,12 @@ export default function Mountains() {
           height={320}
           className="w-full"
           priority
-          ref={ref}
-        />
+          />
       </div>
 
       {/* Front Mountain with Parallax */}
       <motion.div
-        className="absolute bottom-0 w-full z-10 pointer-events-none -my-8" style={{y}}
+        className="absolute bottom-0 w-full z-10 pointer-events-none my-2 sm:-my-14" style={{y}}
       >
         <Image
           src="/shapes/mountains-front.svg"
@@ -40,6 +37,14 @@ export default function Mountains() {
           priority
         />
       </motion.div>
+      {/* <ParallaxImage 
+        path="/mountains-front.svg" 
+        width={2000} 
+        height={1000} 
+        distance={300}
+        className="absolute bottom-0 w-full h-4 z-10 pointer-events-none"
+      /> */}
+
     </div>
   );
 }

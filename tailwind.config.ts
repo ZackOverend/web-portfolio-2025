@@ -12,9 +12,6 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      backgroundImage: {
-        'paper': "url('/images/paper.svg')",
-      }
     },
   },
   plugins: [],
