@@ -41,7 +41,7 @@ export default function Orbs() {
 
 
   return (
-    <div ref={containerRef} className="mask-gradient relative w-full h-full overflow-hidden z-10">
+    <div ref={containerRef} className="mask-gradient relative w-full h-full overflow-hidden z-10 border-black/70 border-6 blur-2xl">
       <motion.div
         style={{y}}
       >
