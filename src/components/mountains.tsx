@@ -11,7 +11,7 @@ export default function Mountains() {
   const y = useParallax(scrollYProgress, 50);
 
   return (
-    <div className="bg-red-700">
+    <div className="">
       {/* Back Mountain */}
       <div className="absolute w-full bottom-4 left-0 -z-10 sm:pb-4 md:pb-8 lg:pb-16 pointer-events-none ">
         <Image

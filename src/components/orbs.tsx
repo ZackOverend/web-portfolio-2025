@@ -33,10 +33,10 @@ export default function Orbs() {
     { style: blueOrb, id: "blue2", position: { x: 150, y: 200 } },
   ];
   
-  const optimizedOrbs = [
-    // { style: greenOrb, id: "gree1", position: { x: 1200, y: 40 }},
-    { style: blueOrb, id: "blue2", position: { x: 150, y: 200 } },
-  ]
+  // const optimizedOrbs = [
+  //   // { style: greenOrb, id: "gree1", position: { x: 1200, y: 40 }},
+  //   { style: blueOrb, id: "blue2", position: { x: 150, y: 200 } },
+  // ]
 
   useEffect(() => {
     const isTouchScreen = "ontouchstart" in window || navigator.maxTouchPoints > 0;
