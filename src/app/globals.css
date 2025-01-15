@@ -43,15 +43,55 @@ h2 {
   font-size: x-large;
 }
 
-/* @layer utilities {
-  .mask-gradient {
-    -webkit-mask-image: linear-gradient(to bottom, black 100%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 20%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-    mask-size: cover;
+
+@layer utilities {
+
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+    z-index: -1;
   }
-} */
+  .card {
+    margin: 0 auto;
+    padding: 2em;
+    width: 300px;
+    background: black;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
 
+  .card::after, .card::before {
+    content: '';
+    position: absolute;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    background-image: conic-gradient(from var(--angle), #AEFFE1, #AEBCFF, #AEFFE1);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -10; /* Lower than .card */
+    padding: 3px;
+    border-radius: 10px;
+    animation: 2s spin linear infinite;
+    transform: translateZ(0);
 
+  }
+  
+  
+   .card::before {
+    filter: blur(1.5rem);
+    opacity: 0.3;
+  }
+
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+  
+}

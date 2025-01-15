@@ -13,15 +13,12 @@ export default function Orbs() {
     height: 400,
     backgroundColor: "#adffe1",
     borderRadius: "9999px",
-    // filter: "blur(150px)",
   };
   const blueOrb = {
     width: 400,
     height: 400,
     backgroundColor: "#aebcff",
     borderRadius: "9999px",
-    // filter: "blur(150px)",
-    // z: 50
   };
 
   const orbs = [
@@ -32,11 +29,6 @@ export default function Orbs() {
     { style: blueOrb, id: "blue1", position: { x: 800, y: 280 } },
     { style: blueOrb, id: "blue2", position: { x: 150, y: 200 } },
   ];
-  
-  // const optimizedOrbs = [
-  //   // { style: greenOrb, id: "gree1", position: { x: 1200, y: 40 }},
-  //   { style: blueOrb, id: "blue2", position: { x: 150, y: 200 } },
-  // ]
 
   useEffect(() => {
     const isTouchScreen = "ontouchstart" in window || navigator.maxTouchPoints > 0;
@@ -75,16 +67,6 @@ export default function Orbs() {
             />
           ))}          
         </motion.div>
-
-        {/* <motion.div>
-          <Image
-            src={'/shapes/green-orb-large.svg'}
-            width={1800}
-            height={400}
-            alt="Green Orb Large"
-            className=""
-          />
-        </motion.div> */}
       </div>
       
       <Image
