@@ -1,21 +1,20 @@
-"use client";
+'use client';
 
 // import { useParallax } from "@/hooks/useParralax";
-import { AnimatePresence, motion, useTime, useTransform} from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion, useTime, useTransform } from 'framer-motion';
+import { useState } from 'react';
 // import { useRef } from "react";
 
 export default function ProjectView() {
   return (
     <>
-      <div className="flex mx-32 space-x-8 justify-center relative"> 
+      <div className='relative mx-32 flex justify-center space-x-8'>
         <RotatingGradientBox>
           <h2>Weather iOS Application</h2>
           <button>EXPAND</button>
         </RotatingGradientBox>
       </div>
     </>
-
   );
 }
 
@@ -28,22 +27,22 @@ function RotatingGradientBox({ children }: { children: React.ReactNode }) {
     return `conic-gradient(from ${r}deg, #AEFFE1, #AEBCFF, #AEFFE1)`;
   });
 
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
-      <div className="flex relative w-auto h-auto">
+      <div className='relative flex h-auto w-auto'>
         {/* Motion div that triggers the hover effect */}
         <motion.div
-          className="bg-black p-8 w-80 text-center items-center justify-center rounded-md border-[1px] "
+          className='w-80 items-center justify-center rounded-md border-[1px] bg-black p-8 text-center'
           whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 1.02, y: -1}}
+          whileTap={{ scale: 1.02, y: -1 }}
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
           onTouchStart={() => setIsHovered((prev) => !prev)}
-          onClick={() => (modalOpen ?  setModalOpen(false) : setModalOpen(true))}
-          >
+          onClick={() => (modalOpen ? setModalOpen(false) : setModalOpen(true))}
+        >
           Hover over me
         </motion.div>
 
@@ -61,44 +60,83 @@ function RotatingGradientBox({ children }: { children: React.ReactNode }) {
               >
               </motion.div> */}
               <motion.div
-              className="absolute -inset-1 rounded-md -z-20 blur-[1rem] opacity-80 pointer-events-none"
-              style={{background: rotatingBg}}
-              initial={{ opacity: 0, scale: 1.0 }}
-              animate={{ opacity: 1, scale: 1.1}}
-              exit={{ opacity: 0}}
-              transition={{ duration: 0.5 }}
-              >
-              </motion.div>
-              </>
+                className='pointer-events-none absolute -inset-1 -z-20 rounded-md opacity-80 blur-[1rem]'
+                style={{ background: rotatingBg }}
+                initial={{ opacity: 0, scale: 1.0 }}
+                animate={{ opacity: 1, scale: 1.1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              ></motion.div>
+            </>
           )}
         </AnimatePresence>
       </div>
-      <div className="absolute w-screen h-auto top-40 content-center">
+      <div className='absolute top-40 h-auto w-screen content-center'>
         <AnimatePresence initial={false}>
-        {modalOpen && (
-          <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{opacity: 0, scale: 0}}
-          transition={{
-              duration: 0.4,
-              scale: { type: "spring", visualDuration: 0.4, bounce: 0.4 },
-          }}
-          >
-            <div className="w-96 h-80 flex-col justify-center items-start gap-9 inline-flex">
-            <div className="text-white text-5xl font-normal font-['Roboto Condensed'] tracking-widest">Weather Application</div>
-            <div className="self-stretch h-0.5 bg-[#d9d9d9]"></div>
-            <div className="w-96 h-36 text-[#c3c3c3] text-xl font-normal font-['Roboto Mono'] tracking-widest">A sleek and user-friendly weather application designed for iOS that helps users track the temperature of their current location as well as any other areas of interest. Includes AI-driven descriptions, custom features, and admin functionalities, and a widget.</div>
-            </div>
-            <div className="h-80 p-2.5 bg-black rounded-lg flex-col justify-start items-start gap-5 inline-flex overflow-hidden">
-            <div className="w-96"><span className="text-white text-2xl font-bold font-['Roboto Condensed'] tracking-widest">Dynamic AI Insights</span><span className="text-white text-2xl font-normal font-['Roboto Condensed'] tracking-widest">: Gemini AI generates concise, real-time weather descriptions for each location.</span></div>
-            <div className="w-96"><span className="text-white text-2xl font-bold font-['Roboto Condensed'] tracking-widest">Personalized Experience</span><span className="text-white text-2xl font-normal font-['Roboto Condensed'] tracking-widest">: Track current weather, favorite multiple locations, and access detailed forecasts, including “feels like” temperatures.</span></div>
-            <div className="w-96"><span className="text-white text-2xl font-bold font-['Roboto Condensed'] tracking-widest">User-Friendly Design</span><span className="text-white text-2xl font-normal font-['Roboto Condensed'] tracking-widest">: SwiftUI-powered interface with a custom app icon, widgets, and intuitive navigation.</span></div>
-            <div className="w-96"><span className="text-white text-2xl font-bold font-['Roboto Condensed'] tracking-widest">Secure Authentication</span><span className="text-white text-2xl font-normal font-['Roboto Condensed'] tracking-widest">: Encrypted Firebase database for user sign-in and validation.</span></div>
-            </div>
-          </motion.div>
-        )}
-
+          {modalOpen && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{
+                duration: 0.4,
+                scale: { type: 'spring', visualDuration: 0.4, bounce: 0.4 },
+              }}
+            >
+              <div className='inline-flex h-80 w-96 flex-col items-start justify-center gap-9'>
+                <div className="font-['Roboto Condensed'] text-5xl font-normal tracking-widest text-white">
+                  Weather Application
+                </div>
+                <div className='h-0.5 self-stretch bg-[#d9d9d9]'></div>
+                <div className="font-['Roboto Mono'] h-36 w-96 text-xl font-normal tracking-widest text-[#c3c3c3]">
+                  A sleek and user-friendly weather application designed for iOS
+                  that helps users track the temperature of their current
+                  location as well as any other areas of interest. Includes
+                  AI-driven descriptions, custom features, and admin
+                  functionalities, and a widget.
+                </div>
+              </div>
+              <div className='inline-flex h-80 flex-col items-start justify-start gap-5 overflow-hidden rounded-lg bg-black p-2.5'>
+                <div className='w-96'>
+                  <span className="font-['Roboto Condensed'] text-2xl font-bold tracking-widest text-white">
+                    Dynamic AI Insights
+                  </span>
+                  <span className="font-['Roboto Condensed'] text-2xl font-normal tracking-widest text-white">
+                    : Gemini AI generates concise, real-time weather
+                    descriptions for each location.
+                  </span>
+                </div>
+                <div className='w-96'>
+                  <span className="font-['Roboto Condensed'] text-2xl font-bold tracking-widest text-white">
+                    Personalized Experience
+                  </span>
+                  <span className="font-['Roboto Condensed'] text-2xl font-normal tracking-widest text-white">
+                    : Track current weather, favorite multiple locations, and
+                    access detailed forecasts, including “feels like”
+                    temperatures.
+                  </span>
+                </div>
+                <div className='w-96'>
+                  <span className="font-['Roboto Condensed'] text-2xl font-bold tracking-widest text-white">
+                    User-Friendly Design
+                  </span>
+                  <span className="font-['Roboto Condensed'] text-2xl font-normal tracking-widest text-white">
+                    : SwiftUI-powered interface with a custom app icon, widgets,
+                    and intuitive navigation.
+                  </span>
+                </div>
+                <div className='w-96'>
+                  <span className="font-['Roboto Condensed'] text-2xl font-bold tracking-widest text-white">
+                    Secure Authentication
+                  </span>
+                  <span className="font-['Roboto Condensed'] text-2xl font-normal tracking-widest text-white">
+                    : Encrypted Firebase database for user sign-in and
+                    validation.
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
     </>

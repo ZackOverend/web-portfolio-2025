@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import Image from "next/image";
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Orbs() {
   const containerRef = useRef(null);
@@ -11,41 +11,41 @@ export default function Orbs() {
   const greenOrb = {
     width: 400,
     height: 400,
-    backgroundColor: "#adffe1",
-    borderRadius: "9999px",
+    backgroundColor: '#adffe1',
+    borderRadius: '9999px',
   };
   const blueOrb = {
     width: 400,
     height: 400,
-    backgroundColor: "#aebcff",
-    borderRadius: "9999px",
+    backgroundColor: '#aebcff',
+    borderRadius: '9999px',
   };
 
   const orbs = [
-    { style: greenOrb, id: "green1", position: { x: 1200, y: 40 }},
-    { style: greenOrb, id: "green2", position: { x: 0, y: 80 } },
-    { style: greenOrb, id: "green3", position: { x: 300, y: 300 } },
-    { style: greenOrb, id: "green4", position: { x: 500, y: 300 } },
-    { style: blueOrb, id: "blue1", position: { x: 800, y: 280 } },
-    { style: blueOrb, id: "blue2", position: { x: 150, y: 200 } },
+    { style: greenOrb, id: 'green1', position: { x: 1200, y: 40 } },
+    { style: greenOrb, id: 'green2', position: { x: 0, y: 80 } },
+    { style: greenOrb, id: 'green3', position: { x: 300, y: 300 } },
+    { style: greenOrb, id: 'green4', position: { x: 500, y: 300 } },
+    { style: blueOrb, id: 'blue1', position: { x: 800, y: 280 } },
+    { style: blueOrb, id: 'blue2', position: { x: 150, y: 200 } },
   ];
 
   useEffect(() => {
-    const isTouchScreen = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    const isTouchScreen =
+      'ontouchstart' in window || navigator.maxTouchPoints > 0;
     setIsTouch(isTouchScreen);
   }, []);
 
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [-0, 50]);
 
-
   return (
     <>
-      <div ref={containerRef} className="z-10 border-black/80 border-x-8 hidden sm:min-h-full sm:block items-center justify-center">
-        <motion.div
-          style={{y}}
-          className="blur-[10rem]"
-          >
+      <div
+        ref={containerRef}
+        className='z-10 hidden items-center justify-center border-x-8 border-black/80 sm:block sm:min-h-full'
+      >
+        <motion.div style={{ y }} className='blur-[10rem]'>
           {orbs.map((orb) => (
             <motion.div
               key={orb.id}
@@ -53,31 +53,30 @@ export default function Orbs() {
               dragConstraints={containerRef}
               style={{
                 ...orb.style,
-                position: "absolute",
+                position: 'absolute',
                 left: `${orb.position.x}px`,
                 top: `${orb.position.y}px`,
               }}
               transition={{
-                type: "spring",
+                type: 'spring',
                 stiffness: 40,
                 damping: 20,
                 duration: 0.001,
-                ease: "easeInOut"
+                ease: 'easeInOut',
               }}
             />
-          ))}          
+          ))}
         </motion.div>
       </div>
-      
+
       <Image
-          src="/shapes/mobile-gradient.svg"
-          alt="Gradient"
-          width={1440}
-          height={320}
-          priority
-          className="sm:hidden "
-        />
+        src='/shapes/mobile-gradient.svg'
+        alt='Gradient'
+        width={1440}
+        height={320}
+        priority
+        className='sm:hidden'
+      />
     </>
-    
   );
 }

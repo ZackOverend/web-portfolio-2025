@@ -1,24 +1,23 @@
-"use client"
+'use client';
 
-import Navbar from "@/components/navbar";
-import Orbs from "@/components/orbs";
-import Mountains from "@/components/mountains";
-import HeroText from "@/components/hero-text";
-import ProjectHorizontalList from "@/components/project-horizontal";
+import Navbar from '@/components/navbar';
+import Orbs from '@/components/orbs';
+import Mountains from '@/components/mountains';
+import HeroText from '@/components/hero-text';
+import ProjectHorizontalList from '@/components/project-horizontal';
 // import { motion } from "framer-motion";
-
 
 export default function Home() {
   return (
-    <main className="max-w-full h-[200vh] flex flex-col">
+    <main className='flex h-[200vh] max-w-full flex-col'>
       <Navbar />
-      <section className="relative h-[95vh] z-0 flex flex-col pt-16">
+      <section className='relative z-0 flex h-[95vh] flex-col pt-16'>
         <HeroText />
         <Orbs />
         <Mountains />
       </section>
-      <section className="relative w-full h-[100vh] bg-black z-10">
-        <ProjectHorizontalList/>
+      <section className='relative z-10 h-[100vh] w-full bg-black'>
+        <ProjectHorizontalList />
       </section>
     </main>
   );
