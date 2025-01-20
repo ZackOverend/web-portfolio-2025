@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Orbs from "@/components/orbs";
 import Mountains from "@/components/mountains";
 import HeroText from "@/components/hero-text";
-import ProjectView from "@/components/project-horizontal";
+import ProjectHorizontalList from "@/components/project-horizontal";
 // import { motion } from "framer-motion";
 
 
@@ -18,8 +18,7 @@ export default function Home() {
         <Mountains />
       </section>
       <section className="relative w-full h-[100vh] bg-black z-10">
-        <ProjectView/>
-
+        <ProjectHorizontalList/>
       </section>
     </main>
   );
