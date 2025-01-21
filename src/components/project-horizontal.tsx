@@ -1,18 +1,9 @@
 'use client';
 
 // import { useParallax } from "@/hooks/useParralax";
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useTime,
-  useTransform,
-} from 'framer-motion';
-import { useRef, useState } from 'react';
-import GradientButton from './gradient-button';
+import { motion } from 'framer-motion';
+// import GradientButton from './gradient-button';
 import SlideTabs from './slide-tabs';
-// import { useRef } from "react";
-import { useParallax } from '@/hooks/useParralax';
 import ProjectDetails from './project-details';
 
 export default function ProjectView() {
@@ -47,38 +38,6 @@ export default function ProjectView() {
         </motion.div>
       </div>
       <SlideTabs tabs={tabs} />
-    </>
-  );
-}
-
-// Reusable RotatingGradientBox function
-function RotatingGradientBox({ children }: { children: React.ReactNode }) {
-  const time = useTime();
-  const rotate = useTransform(time, [0, 3000], [0, 360], { clamp: false });
-
-  const rotatingBg = useTransform(rotate, (r) => {
-    return `conic-gradient(from ${r}deg, #AEFFE1, #AEBCFF, #AEFFE1)`;
-  });
-
-  const [isHovered, setIsHovered] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
-
-  return (
-    <>
-      <div className='relative flex h-auto w-auto'>
-        {/* Motion div that triggers the hover effect */}
-        <motion.div
-          className='w-80 items-center justify-center rounded-md border-[1px] bg-black p-8 text-center'
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 1.02, y: -1 }}
-          onHoverStart={() => setIsHovered(true)}
-          onHoverEnd={() => setIsHovered(false)}
-          onTouchStart={() => setIsHovered((prev) => !prev)}
-          onClick={() => (modalOpen ? setModalOpen(false) : setModalOpen(true))}
-        >
-          Hover over me
-        </motion.div>
-      </div>
     </>
   );
 }

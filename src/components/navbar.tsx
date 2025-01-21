@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { animate, hover, motion, spring } from 'framer-motion';
+import { motion } from 'framer-motion';
 import GradientButton from './gradient-button';
 
 export default function Navbar() {
