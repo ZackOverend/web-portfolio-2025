@@ -16,7 +16,7 @@ export default function Home() {
         <Orbs />
         <Mountains />
       </section>
-      <section className='relative z-10 h-[100vh] w-full bg-black'>
+      <section className='relative z-10 -my-16 h-[100vh] w-full bg-black'>
         <ProjectHorizontalList />
       </section>
     </main>

@@ -23,42 +23,42 @@ export default function GradientButton({
   const [isHovered, setIsHovered] = useState(false);
 
   const content = (
-    <>
+    <div className='relative flex h-auto w-auto items-center justify-center'>
+      {/* Main Button */}
       <motion.div
-        className={`${className} items-center justify-center rounded-md border-[1px] bg-black text-center`}
+        className={`${className} relative z-10 rounded-md border-[1px] bg-black`}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 1.02, y: -1 }}
+        whileTap={{ scale: 1 }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
-        // onTouchStart={() => setIsHovered((prev) => !prev)}
       >
         {children}
       </motion.div>
+
+      {/* Animated Gradient Background */}
       <AnimatePresence>
         {isHovered && (
           <motion.div
-            className='pointer-events-none absolute -inset-1 -z-20 rounded-md opacity-80 blur-[1rem]'
+            className={`${className} pointer-events-none absolute inset-0 z-0 rounded-md`}
             style={{ background: rotatingBg }}
-            initial={{ opacity: 0, scale: 1.0 }}
-            animate={{ opacity: 1, scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.7, filter: 'blur(0px)' }}
+            animate={{ opacity: 1, filter: 'blur(20px)', scale: 1.1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           ></motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 
   return (
-    <div className='relative flex h-auto w-auto'>
-      <Link
-        href={link}
-        className='inline-block'
-        target={target} // _self - this page | _blank - new page
-        rel='noopener noreferrer'
-      >
-        {content}
-      </Link>
-    </div>
+    <Link
+      href={link}
+      className='inline-block'
+      target={target} // _self - this page | _blank - new page
+      rel='noopener noreferrer'
+    >
+      {content}
+    </Link>
   );
 }

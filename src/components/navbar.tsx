@@ -94,12 +94,7 @@ export default function Navbar() {
             target='#contact'
             className='hidden h-auto items-start space-x-4 bg-none px-4 py-0 sm:block'
           >
-            <a
-              href='www.google.com'
-              className='text-[16px] font-thin tracking-wide'
-            >
-              CONTACT ME
-            </a>
+            CONTACT ME
           </GradientButton>
         </div>
       </motion.nav>
