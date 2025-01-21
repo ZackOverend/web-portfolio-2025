@@ -9,7 +9,7 @@ import ProjectHorizontalList from '@/components/project-horizontal';
 
 export default function Home() {
   return (
-    <main className='flex h-[200vh] max-w-full flex-col'>
+    <main className='flex h-[200vh] max-w-full flex-col overflow-hidden'>
       <Navbar />
       <section className='relative z-0 flex h-[95vh] flex-col pt-16'>
         <HeroText />

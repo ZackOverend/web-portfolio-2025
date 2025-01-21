@@ -3,6 +3,7 @@
 // import { useParallax } from "@/hooks/useParralax";
 import { AnimatePresence, motion, useTime, useTransform } from 'framer-motion';
 import { useState } from 'react';
+import GradientButton from './gradient-button';
 // import { useRef } from "react";
 
 export default function ProjectView() {
@@ -13,6 +14,9 @@ export default function ProjectView() {
           <h2>Weather iOS Application</h2>
           <button>EXPAND</button>
         </RotatingGradientBox>
+        <GradientButton>
+          <p>Test</p>
+        </GradientButton>
       </div>
     </>
   );

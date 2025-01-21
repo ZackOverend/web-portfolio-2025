@@ -9,9 +9,9 @@
   --foreground: #ffffff;
   /* --font-chewy: "Chewy", cursive;
   --font-fira-mono: "Fira-Mono", ; */
-  --font-roboto: "Roboto";
-  --font-roboto-mono: "Roboto-Mono";
-  --font-roboto-condensed: "Roboto-Condensed";
+  --font-roboto: 'Roboto';
+  --font-roboto-mono: 'Roboto-Mono';
+  --font-roboto-condensed: 'Roboto-Condensed';
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,11 +43,9 @@ h2 {
   font-size: x-large;
 }
 
-
 @layer utilities {
-
-  @property --angle{
-    syntax: "<angle>";
+  @property --angle {
+    syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
     z-index: -1;
@@ -62,12 +60,18 @@ h2 {
     position: relative;
   }
 
-  .card::after, .card::before {
+  .card::after,
+  .card::before {
     content: '';
     position: absolute;
     height: calc(100% + 5px);
     width: calc(100% + 5px);
-    background-image: conic-gradient(from var(--angle), #AEFFE1, #AEBCFF, #AEFFE1);
+    background-image: conic-gradient(
+      from var(--angle),
+      #aeffe1,
+      #aebcff,
+      #aeffe1
+    );
     top: 50%;
     left: 50%;
     translate: -50% -50%;
@@ -76,22 +80,19 @@ h2 {
     border-radius: 10px;
     animation: 2s spin linear infinite;
     transform: translateZ(0);
-
   }
-  
-  
-   .card::before {
+
+  .card::before {
     filter: blur(1.5rem);
     opacity: 0.3;
   }
 
-  @keyframes spin{
-    from{
+  @keyframes spin {
+    from {
       --angle: 0deg;
     }
-    to{
+    to {
       --angle: 360deg;
     }
   }
-  
 }
