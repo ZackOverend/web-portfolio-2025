@@ -4,7 +4,7 @@ import Navbar from '@/components/navbar';
 import Orbs from '@/app/pages/orbs';
 import Mountains from '@/components/mountains';
 import HeroText from '@/app/pages/hero-text';
-import ProjectHorizontalList from '@/app/pages/project-horizontal';
+import Projects from '@/app/pages/projects';
 import AboutView from '@/app/pages/about';
 // import { motion } from "framer-motion";
 
@@ -17,15 +17,11 @@ export default function Home() {
         <Orbs />
         <Mountains />
       </section>
-      <section
-        className='relative z-10 h-[160vh] w-full bg-black px-36'
-        id='projects'
-      >
-        <ProjectHorizontalList />
-      </section>
-      <section className='relative h-[100vh] w-full bg-black px-36'>
+      <section className='relative z-10 w-full bg-black px-36' id='projects'>
+        <Projects />
         <AboutView />
       </section>
+      <section className='relative h-[100vh] w-full bg-black px-36'></section>
     </main>
   );
 }

@@ -14,6 +14,7 @@ export default function ProjectView() {
       title: 'Nova Weather',
       content: <ProjectDetails id={'1'} />,
     },
+
     // {
     //   title: 'Task Flow',
     //   content: <ProjectDetails2 name={'Angular Kanban Board (WIP)'} />,

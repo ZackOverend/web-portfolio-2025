@@ -3,7 +3,7 @@
 import { useParallax } from '@/hooks/useParralax';
 import { useScroll } from 'framer-motion';
 import { useRef } from 'react';
-import SectionHeaderLine from '@/components/section-header-line';
+import SectionHeaderLine from '@/components/section-header';
 
 export default function HeroText() {
   const ref = useRef(null);

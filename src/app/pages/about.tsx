@@ -1,6 +1,6 @@
 'use client';
 
-import SectionHeaderLine from '@/components/section-header-line';
+import SectionHeaderLine from '@/components/section-header';
 
 export default function AboutView() {
   const text = (

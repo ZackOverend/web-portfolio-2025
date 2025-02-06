@@ -10,6 +10,11 @@ export default function Navbar() {
     whileHover: { scale: 0.95, opacity: 0.5 },
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.querySelector(sectionId);
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <motion.nav>
@@ -19,11 +24,7 @@ export default function Navbar() {
             <motion.div
               className='flex h-14 w-12 flex-none items-center space-x-6'
               {...hoverAnimation}
-              onClick={() => {
-                document
-                  .getElementById('hero')
-                  ?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => scrollToSection('#hero')}
             >
               <Image
                 src='/images/logo.svg'
@@ -38,22 +39,14 @@ export default function Navbar() {
               <motion.div
                 className='cursor-pointer'
                 {...hoverAnimation}
-                onClick={() => {
-                  document
-                    .getElementById('projects')
-                    ?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => scrollToSection('#projects')}
               >
                 PROJECTS
               </motion.div>
               <motion.div
                 className='cursor-pointer'
                 {...hoverAnimation}
-                onClick={() => {
-                  document
-                    .getElementById('about')
-                    ?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => scrollToSection('#about')}
               >
                 ABOUT
               </motion.div>

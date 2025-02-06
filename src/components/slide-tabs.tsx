@@ -27,7 +27,7 @@ const ChipTabs = ({
           ))}
         </div>
       </div>
-      <div className='relative w-full'>
+      <div className='relative h-auto w-full'>
         <AnimatePresence mode='wait'>
           <motion.div
             key={selected}
@@ -35,7 +35,7 @@ const ChipTabs = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className='absolute inset-0'
+            className='w-full'
           >
             {selectedTabContent || <div>No content available</div>}
           </motion.div>
