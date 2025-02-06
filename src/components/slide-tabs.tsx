@@ -27,7 +27,7 @@ const ChipTabs = ({
           ))}
         </div>
       </div>
-      <div className='relative h-auto w-full'>
+      <div className='relative h-auto w-full pb-32 text-center'>
         <AnimatePresence mode='wait'>
           <motion.div
             key={selected}

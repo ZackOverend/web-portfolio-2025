@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, MotionValue } from 'framer-motion';
 import { useRef } from 'react';
 
 export default function SectionHeaderLine({
@@ -6,9 +6,9 @@ export default function SectionHeaderLine({
   subheading,
   y,
 }: {
-  heading: any;
-  subheading?: any;
-  y?: any;
+  heading: string;
+  subheading?: string;
+  y?: MotionValue<number>;
 }) {
   const ref = useRef(null);
 

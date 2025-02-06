@@ -14,23 +14,18 @@ export default function ProjectView() {
       title: 'Nova Weather',
       content: <ProjectDetails id={'1'} />,
     },
-
-    // {
-    //   title: 'Task Flow',
-    //   content: <ProjectDetails2 name={'Angular Kanban Board (WIP)'} />,
-    // },
-    // {
-    //   title: 'Recipe Manager',
-    //   content: <ProjectDetails3 name={'C# Recipe Manager'} />,
-    // },
-    // {
-    //   title: 'Image Detection API',
-    //   content: (
-    //     <ProjectDetails4
-    //       name={'ASP.net Image Categorization and Detection API'}
-    //     />
-    //   ),
-    // },
+    {
+      title: 'Task Flow',
+      content: <p>Sorry, this page is currently in development</p>,
+    },
+    {
+      title: 'Recipe Manager',
+      content: <p>Sorry, this page is currently in development</p>,
+    },
+    {
+      title: 'Image Detection API',
+      content: <p>Sorry, this page is currently in development</p>,
+    },
   ];
 
   return <SlideTabs tabs={tabs} />;
@@ -38,10 +33,6 @@ export default function ProjectView() {
 
 // Ensure TypeScript treats projectsData as an object with the correct structure
 const projects: ProjectsData = prj;
-
-interface ProjectDetails1Props {
-  id: string;
-}
 
 export function ProjectDetails({ id }: { id: string }) {
   const projectKey = `p${id}`; // "p1", "p2", or "p3"
@@ -94,25 +85,25 @@ export function ProjectDetails({ id }: { id: string }) {
   );
 }
 
-export function ProjectDetails2({ name }: { name: string }) {
-  return (
-    <div>
-      <h1>Test</h1>
-    </div>
-  );
-}
+// export function ProjectDetails2({ name }: { name: string }) {
+//   return (
+//     <div>
+//       <h1>Test</h1>
+//     </div>
+//   );
+// }
 
-export function ProjectDetails3({ name }: { name: string }) {
-  return (
-    <div>
-      <h1>Test</h1>
-    </div>
-  );
-}
-export function ProjectDetails4({ name }: { name: string }) {
-  return (
-    <div>
-      <h1>Test</h1>
-    </div>
-  );
-}
+// export function ProjectDetails3({ name }: { name: string }) {
+//   return (
+//     <div>
+//       <h1>Test</h1>
+//     </div>
+//   );
+// }
+// export function ProjectDetails4({ name }: { name: string }) {
+//   return (
+//     <div>
+//       <h1>Test</h1>
+//     </div>
+//   );
+// }
