@@ -14,16 +14,18 @@ const ChipTabs = ({
   )?.content;
 
   return (
-    <div className='relative flex flex-col justify-start gap-4 px-4 py-14'>
-      <div className='relative ml-8 inline-flex w-max gap-4 rounded-md border-[1px] border-slate-800 p-2 text-xl font-semibold'>
-        {tabs.map((tab) => (
-          <Chip
-            text={tab.title}
-            selected={selected === tab.title}
-            setSelected={setSelected}
-            key={tab.title}
-          />
-        ))}
+    <>
+      <div className='m-16 flex justify-center'>
+        <div className='relative inline-flex w-max gap-4 rounded-md border-[1px] border-slate-800 p-2 text-xl font-semibold'>
+          {tabs.map((tab) => (
+            <Chip
+              text={tab.title}
+              selected={selected === tab.title}
+              setSelected={setSelected}
+              key={tab.title}
+            />
+          ))}
+        </div>
       </div>
       <div className='relative w-full'>
         <AnimatePresence mode='wait'>
@@ -39,7 +41,7 @@ const ChipTabs = ({
           </motion.div>
         </AnimatePresence>
       </div>
-    </div>
+    </>
   );
 };
 

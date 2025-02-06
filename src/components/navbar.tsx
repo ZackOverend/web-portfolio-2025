@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -17,24 +19,43 @@ export default function Navbar() {
             <motion.div
               className='flex h-14 w-12 flex-none items-center space-x-6'
               {...hoverAnimation}
+              onClick={() => {
+                document
+                  .getElementById('hero')
+                  ?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
-              <Link href=''>
-                <Image
-                  src='/images/logo.svg'
-                  width={64}
-                  height={64}
-                  alt='logo'
-                  priority
-                />
-              </Link>
+              <Image
+                src='/images/logo.svg'
+                width={64}
+                height={64}
+                alt='logo'
+                priority
+              />
             </motion.div>
 
             <div className='hidden items-center space-x-4 text-center text-[16px] font-thin tracking-wide sm:flex'>
-              <motion.div {...hoverAnimation}>
-                <Link href='#projects'>PROJECTS</Link>
+              <motion.div
+                className='cursor-pointer'
+                {...hoverAnimation}
+                onClick={() => {
+                  document
+                    .getElementById('projects')
+                    ?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                PROJECTS
               </motion.div>
-              <motion.div {...hoverAnimation}>
-                <Link href='#'>ABOUT</Link>
+              <motion.div
+                className='cursor-pointer'
+                {...hoverAnimation}
+                onClick={() => {
+                  document
+                    .getElementById('about')
+                    ?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                ABOUT
               </motion.div>
               <Link href='https://github.com/ZackOverend' target='_blank'>
                 <motion.svg
@@ -90,9 +111,8 @@ export default function Navbar() {
           {/* Contact Me Link */}
 
           <GradientButton
-            link='www.google.com'
-            target='#contact'
-            className='hidden h-auto items-start space-x-4 bg-none px-4 py-0 sm:block'
+            link='mailto:zack.overend@outlook.com'
+            className='hidden h-auto items-start space-x-4 bg-none px-4 py-0 font-thin sm:block'
           >
             CONTACT ME
           </GradientButton>

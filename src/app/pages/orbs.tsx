@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import Image from 'next/image';
 
 export default function Orbs() {
   const containerRef = useRef(null);
@@ -37,7 +36,8 @@ export default function Orbs() {
   }, []);
 
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [-0, 50]);
+  // Subtle vertical movement based on scroll
+  const y = useTransform(scrollYProgress, [0, 1], [0, 50]);
 
   return (
     <>
@@ -45,6 +45,9 @@ export default function Orbs() {
         ref={containerRef}
         className='z-10 hidden items-center justify-center border-x-8 border-black/80 sm:block sm:min-h-full'
       >
+        <div className='absolute w-4 bg-black'></div>
+
+        {/* Container for orbs with slight vertical movement on scroll */}
         <motion.div style={{ y }} className='blur-[10rem]'>
           {orbs.map((orb) => (
             <motion.div
@@ -61,22 +64,32 @@ export default function Orbs() {
                 type: 'spring',
                 stiffness: 40,
                 damping: 20,
-                duration: 0.001,
+                duration: 0.0001,
                 ease: 'easeInOut',
+              }}
+              /**
+               * whileHover applies a short animation as long as the mouse
+               * is hovering over this element. Feel free to adjust the values
+               * (x, y) for a different effect.
+               */
+              whileHover={{
+                x: 0,
+                y: 150,
               }}
             />
           ))}
         </motion.div>
       </div>
 
-      <Image
+      {/* Fallback gradient for mobile */}
+      {/* <Image
         src='/shapes/mobile-gradient.svg'
         alt='Gradient'
         width={1440}
         height={320}
         priority
         className='sm:hidden'
-      />
+      /> */}
     </>
   );
 }

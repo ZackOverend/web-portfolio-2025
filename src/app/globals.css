@@ -24,6 +24,12 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -94,5 +100,11 @@ h2 {
     to {
       --angle: 360deg;
     }
+  }
+
+  /* OFFSETS SCROLLING FOR NAVBAR */
+  #about,
+  #projects {
+    scroll-margin-top: 80px; /* Creates 50px offset from top */
   }
 }

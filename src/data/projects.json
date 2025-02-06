@@ -1,0 +1,31 @@
+{
+    "p1": {
+      "title": "NOVA WEATHER",
+      "subtitle": "Swift UI Weather Application",
+      "desc": "A sleek and user-friendly weather application designed for iOS that helps users track the temperature of their current location as well as any other areas of interest. Includes AI-driven descriptions, custom features, and admin functionalities, and a widget.",
+      "feat": {
+        "f1": {
+          "title": "GEMINI AI INTEGRATION",
+          "content": "Generates concise, real-time weather descriptions for each location"
+        },
+        "f2": {
+          "title": "PERSONALIZED EXPERIENCE",
+          "content": "Track current weather, favorite multiple locations, and access detailed forecasts, including “feels like” temperatures."
+        },
+        "f3": {
+          "title": "INTUITIVE DESIGN",
+          "content": "SwiftUI-powered interface with a custom app icon, widgets, and intuitive navigation."
+        },
+        "f4": {
+          "title": "USER AUTHENTICATION",
+          "content": "Encrypted Firebase database for user sign-in and validation."
+        }
+      },
+      "images": {
+        "i1": {
+          "src": "https://i.ibb.co/SwbpGy1h/image1.png",
+          "alt": "iOS Simulator Login Image"
+        } 
+      }
+    }
+  }

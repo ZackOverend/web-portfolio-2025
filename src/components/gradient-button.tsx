@@ -26,7 +26,7 @@ export default function GradientButton({
     <div className='relative flex h-auto w-auto items-center justify-center'>
       {/* Main Button */}
       <motion.div
-        className={`${className} relative z-10 rounded-md border-[1px] bg-black`}
+        className={`${className} relative z-10 rounded-md border-[1px] border-white`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 1 }}
         onHoverStart={() => setIsHovered(true)}
