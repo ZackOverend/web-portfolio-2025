@@ -30,7 +30,7 @@ export default function AboutView() {
     <div id='about'>
       <SectionHeaderLine heading={'ABOUT ME'} />
 
-      <div className='font w-[vw absolute z-50 h-52 px-14 py-14 text-white'>
+      <div className='font absolute z-50 h-52 w-[vw] px-14 py-14 text-white'>
         {text}
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function Mountains() {
   return (
     <div className=''>
       {/* Back Mountain */}
-      <div className='pointer-events-none absolute bottom-4 left-0 -z-10 w-full sm:pb-4 md:pb-8 lg:pb-16'>
+      <div className='pointer-events-none absolute bottom-4 left-0 -z-10 -my-4 w-full sm:pb-4 md:pb-8 lg:pb-16'>
         <Image
           src='/shapes/mountains-back.svg'
           alt='Mountains Back'
@@ -26,7 +26,7 @@ export default function Mountains() {
 
       {/* Front Mountain with Parallax */}
       <motion.div
-        className='pointer-events-none absolute bottom-0 z-10 my-2 w-full sm:-my-14'
+        className='pointer-events-none absolute bottom-0 z-10 -my-14 w-full sm:-my-14'
         style={{ y }}
       >
         <Image

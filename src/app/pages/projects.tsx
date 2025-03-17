@@ -43,10 +43,6 @@ export function ProjectDetails({ id }: { id: string }) {
     return <div>Project Not Found</div>;
   }
 
-  // Handle invalid `id`
-  if (!projectData) {
-    return <div>Project Not Found</div>;
-  }
   return (
     <div className='p-12'>
       <div className='w-fit space-y-12 text-center'>
@@ -58,7 +54,7 @@ export function ProjectDetails({ id }: { id: string }) {
         </div>
 
         {/* CONTENT */}
-        <section className='flex space-x-8'>
+        <section className='flex items-center justify-center space-x-8'>
           <div className='w-4/6 space-y-10 text-left'>
             <p>{prj.p1.desc}</p>
             {/* Map through features f1, f2, f3, f4 */}
@@ -71,13 +67,15 @@ export function ProjectDetails({ id }: { id: string }) {
               </div>
             ))}
           </div>
-          <div className='min-w-48 flex-1 rounded-lg'>
-            <Image
-              src={'https://i.ibb.co/SwbpGy1h/image1.png'}
-              alt='iOS Image'
-              width={350}
-              height={700}
-            />
+          <div className='-z-10 h-full w-full min-w-48 flex-1 justify-center'>
+            <div className='flex'>
+              <Image
+                src={'images/IPhone-vert.svg'}
+                alt='iOS Image'
+                width={400}
+                height={400}
+              />
+            </div>
           </div>
         </section>
       </div>

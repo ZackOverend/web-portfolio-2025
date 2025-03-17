@@ -43,7 +43,7 @@ export default function Orbs() {
     <>
       <div
         ref={containerRef}
-        className='z-10 hidden items-center justify-center border-x-8 border-black/80 sm:block sm:min-h-full'
+        className='z-10 hidden items-center justify-center border-x-8 border-black/80 sm:block'
       >
         <div className='absolute w-4 bg-black'></div>
 
@@ -80,16 +80,26 @@ export default function Orbs() {
           ))}
         </motion.div>
       </div>
-
       {/* Fallback gradient for mobile */}
-      {/* <Image
-        src='/shapes/mobile-gradient.svg'
-        alt='Gradient'
-        width={1440}
-        height={320}
-        priority
-        className='sm:hidden'
-      /> */}
+      <div
+        className='h-full w-full bg-gradient-to-r from-[#aebcff] via-[#adffe1] to-[#aebcff] opacity-50 sm:hidden'
+        style={{
+          backgroundSize: '200% 100%',
+          animation: 'gradientSlideRight 6s linear infinite',
+        }}
+      />
+
+      {/* Add this keyframe animation to your global CSS */}
+      <style jsx global>{`
+        @keyframes gradientSlideRight {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 200% 50%;
+          }
+        }
+      `}</style>
     </>
   );
 }
