@@ -24,7 +24,7 @@ export default function Navbar() {
       {/* Blur Wrapper */}
       <motion.div
         animate={isOpen ? { opacity: 1 } : { opacity: 0 }}
-        className='absolute top-16 z-40 h-full w-screen bg-black/20 backdrop-blur-lg sm:hidden'
+        className='absolute z-40 h-full w-screen bg-black/20 backdrop-blur-lg sm:hidden'
       ></motion.div>
 
       {/* Navbar */}
