@@ -48,7 +48,7 @@ export default function Orbs() {
         <div className='absolute w-4 bg-black'></div>
 
         {/* Container for orbs with slight vertical movement on scroll */}
-        <motion.div style={{ y }} className='blur-[10rem]'>
+        <motion.div style={{ y }} className='blur-[100px]'>
           {orbs.map((orb) => (
             <motion.div
               key={orb.id}

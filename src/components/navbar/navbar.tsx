@@ -21,14 +21,14 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Blur Wrapper */}
+      {/* Blur Wrapper (FOR MOBILE)*/}
       <motion.div
         animate={isOpen ? { opacity: 1 } : { opacity: 0 }}
         className='absolute z-40 h-full w-screen bg-black/20 backdrop-blur-lg sm:hidden'
       ></motion.div>
 
       {/* Navbar */}
-      <div className='fixed z-50 flex h-16 w-screen items-center justify-between bg-black/30 px-8 py-4 backdrop-blur-md'>
+      <div className='fixed z-40 flex h-16 w-screen items-center justify-between bg-black/30 px-8 py-4 backdrop-blur-md'>
         {/* Logo and Links */}
         <div className='flex h-14 w-12 flex-none items-center space-x-6'>
           <motion.div

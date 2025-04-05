@@ -39,13 +39,13 @@ body {
 
 h1 {
   color: var(--foreground);
-  font-family: var(--font-roboto-mono), Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
   font-size: xx-large;
 }
 
 h2 {
   color: var(--foreground);
-  font-family: var(--font-roboto-condensed), Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
   font-size: x-large;
 }
 
@@ -89,8 +89,20 @@ h2 {
   }
 
   .card::before {
-    filter: blur(1.5rem);
+    backdrop-filter: blur(1.5rem);
     opacity: 0.3;
+  }
+
+  .blurred-shape {
+    width: 525px;
+    height: 525px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Apply a mask with a blurred SVG */
+    -webkit-mask-image: url('/images/nova-weather/hover-shape-mask.svg');
+    mask-image: url('/images/nova-weather/hover-shape-mask.svg');
   }
 
   @keyframes spin {

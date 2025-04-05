@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 // import { Geist, Geist_Mono } from "next/font/google";
 // import {Chewy, Fira_Mono} from "next/font/google";
-import {Roboto, Roboto_Mono, Roboto_Condensed} from "next/font/google"
+import { Roboto, Roboto_Mono, Roboto_Condensed, Inter } from 'next/font/google';
 
-import "./globals.css";
+import './globals.css';
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -28,26 +28,26 @@ import "./globals.css";
 // })
 
 const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: "400"
+  variable: '--font-roboto',
+  subsets: ['latin'],
+  weight: ['200', '400'],
 });
 
 const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
-  subsets: ["latin"],
-  weight: "400"
-})
+  variable: '--font-roboto-mono',
+  subsets: ['latin'],
+  weight: '400',
+});
 
 const robotoCondensed = Roboto_Condensed({
-  variable: "--font-roboto-condensed",
-  subsets: ["latin"],
-  weight: "400"
-})
+  variable: '--font-roboto-condensed',
+  subsets: ['latin'],
+  weight: '400',
+});
 
 export const metadata: Metadata = {
-  title: "ZO Portfolio",
-  description: "Created by Zackary Overend",
+  title: 'ZO Portfolio',
+  description: 'Created by Zackary Overend',
 };
 
 export default function RootLayout({
@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
         className={`${roboto.variable} ${robotoCondensed.variable} ${robotoMono.variable}`}
       >
