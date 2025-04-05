@@ -26,7 +26,6 @@ export default function ProjectView() {
       >
         My Projects
       </motion.div>
-
       <div className='z-20 hidden items-end text-end md:block'>
         <div className='pt-8 text-3xl font-black italic'>NOVA WEATHER</div>
         <div className='-space-y-1 text-lg text-[#8E8E8E]'>
@@ -34,11 +33,9 @@ export default function ProjectView() {
           <p>Weather App</p>
         </div>
       </div>
-
       <div className='sm:hidden'>
         <ProjectsMobile />
       </div>
-
       {/* Container Wrapper */}
       <div className='flex h-full w-full flex-col items-center justify-center'>
         <div className='lg:-mx-50 z-20 -mt-[20rem] mr-4 hidden scale-75 sm:block md:-mt-[20rem] md:scale-[0.9] lg:-mt-[16rem] lg:scale-[1] xl:mr-32 xl:scale-[1.2] 2xl:scale-[1.7]'>
@@ -143,11 +140,7 @@ export default function ProjectView() {
           </motion.div>
         </div>
       </div>
-
       {/* BACKGDROUND GRID */}
-      <div className='absolute bottom-0 left-[3rem] right-[3rem] top-[6.5rem] z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:18px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] xl:mx-[7rem]'></div>
-
-      <section className='h-[100vh] w-[100vw] bg-white'></section>
     </>
   );
 }
