@@ -43,7 +43,7 @@ export default function Home() {
         </section>
         <section
           ref={projectsRef} // Added the ref here
-          className='relative h-screen w-screen bg-black px-12 pt-14 2xl:px-40'
+          className='relative w-screen bg-black px-12 pt-14 sm:h-screen 2xl:px-40'
           id='projects'
         >
           <ProjectsView />
