@@ -1,7 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { ProjectCard } from '@/components/mobile/project-card';
-import { ProjectModal } from '@/components/mobile/project-modal';
 import OtherProjects from '../other-projects';
 
 export default function ProjectsMobile() {

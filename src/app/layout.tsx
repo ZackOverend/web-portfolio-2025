@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 // import { Geist, Geist_Mono } from "next/font/google";
 // import {Chewy, Fira_Mono} from "next/font/google";
-import { Roboto, Roboto_Mono, Roboto_Condensed, Inter } from 'next/font/google';
+import { Roboto, Roboto_Mono, Roboto_Condensed } from 'next/font/google';
 
 import './globals.css';
 

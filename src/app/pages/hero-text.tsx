@@ -1,9 +1,8 @@
 'use client';
 
 import { useParallax } from '@/hooks/useParralax';
-import { AnimatePresence, useInView, useScroll, motion } from 'framer-motion';
+import { useScroll, motion } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import SectionHeaderLine from '@/components/section-header';
 
 export default function HeroText() {
   const ref = useRef(null);

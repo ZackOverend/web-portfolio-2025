@@ -12,8 +12,8 @@ export default function ProjectView() {
   const leftOrbY = useTransform(scrollYProgress, [0, 1], [-10, 40]);
   const rightOrbY = useTransform(scrollYProgress, [0, 1], [-50, 70]);
 
-  // Text (moves a bit faster for foreground feel)
-  const headingY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  // // Text (moves a bit faster for foreground feel)
+  // const headingY = useTransform(scrollYProgress, [0, 1], [0, -100]);
   return (
     <>
       <motion.div
