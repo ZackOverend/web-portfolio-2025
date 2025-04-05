@@ -3,10 +3,10 @@ import { useState } from 'react';
 import OtherProjects from '../other-projects';
 
 export default function ProjectsMobile() {
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  // const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
-  const handleOpen = (project: string) => setSelectedProject(project);
-  const handleClose = () => setSelectedProject(null);
+  // const handleOpen = (project: string) => setSelectedProject(project);
+  // const handleClose = () => setSelectedProject(null);
 
   return (
     <div className='flex flex-col space-y-4 p-8'>

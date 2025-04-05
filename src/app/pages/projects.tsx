@@ -58,7 +58,8 @@ export default function ProjectView() {
               />
               <p className='w-46 -mt-[4.3rem] ml-12 text-[.8rem] font-thin text-black'>
                 Track current weather, favourite multiple locations, and access
-                detailed forecasts, including "feels like" temperatures.
+                detailed forecasts, including &quot;feels like&quot;
+                temperatures.
               </p>
             </div>
           </motion.div>
