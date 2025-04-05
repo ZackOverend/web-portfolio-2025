@@ -6,7 +6,7 @@ import Mountains from '@/components/mountains';
 import HeroText from '@/app/pages/hero-text';
 import ProjectsView from '@/app/pages/projects';
 import AboutView from '@/app/pages/about';
-import OtherProjects from '@/app/pages/other-projects';
+import ProjectsModal from '@/app/pages/projects-modal';
 
 import { useRef } from 'react';
 import { AnimatePresence } from 'framer-motion'; // Changed from motion/react
@@ -50,7 +50,7 @@ export default function Home() {
           <div className='absolute bottom-0 left-[3rem] right-[3rem] top-[6.5rem] z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:18px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] xl:mx-[7rem]'></div>
         </section>
         <section className='hidden w-full bg-black pb-32 sm:block'>
-          <OtherProjects />
+          <ProjectsModal />
         </section>
         <section className='relative w-full bg-black px-12 2xl:px-40'>
           <AboutView />

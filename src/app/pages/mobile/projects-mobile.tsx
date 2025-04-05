@@ -1,6 +1,6 @@
 'use client';
 // import { useState } from 'react';
-import OtherProjects from '../other-projects';
+import ProjectsModal from '@/app/pages//projects-modal';
 
 export default function ProjectsMobile() {
   // const [selectedProject, setSelectedProject] = useState<string | null>(null);
@@ -10,7 +10,7 @@ export default function ProjectsMobile() {
 
   return (
     <div className='flex flex-col space-y-4 p-8'>
-      <OtherProjects />
+      <ProjectsModal />
       {/* <ProjectCard
         title='NOVA WEATHER'
         subtitle='AI Driven Smart Weather App'

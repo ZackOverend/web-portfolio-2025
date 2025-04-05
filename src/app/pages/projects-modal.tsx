@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function OtherProjects() {
+export default function ProjectsModal() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const projects = [

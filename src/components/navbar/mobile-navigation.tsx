@@ -111,7 +111,7 @@ export default function MobileNavigation({
             initial='hidden'
             animate='visible'
             exit='exit'
-            className='fixed inset-0 top-16 z-40 flex h-screen flex-col items-center bg-black backdrop-blur-lg'
+            className='fixed inset-0 top-16 flex h-screen flex-col items-center bg-black'
           >
             <motion.nav className='flex w-full flex-col items-start py-8'>
               {menuItems.map((item, i) => (
